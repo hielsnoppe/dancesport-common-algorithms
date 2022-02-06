@@ -20,7 +20,7 @@ class MultiMajorityRankingAlgorithmTest() {
 		val table = MultiMajorityRankingAlgorithm.getMajorityTable(scorings)
 		
 		for (c in expectedResult.getCandidates()) {
-			val row = table.single({ r -> r.candidate == c})
+			val row = table.single { r -> r.candidate == c }
 			val rowEntries = row.entries.joinToString()
 			val rowSum = row.sum
 			assertEquals(expectedResult.getRank(c), actualResult.getRank(c), "Candidate $c ($rowSum; $rowEntries)")

@@ -30,7 +30,7 @@ object FinalDanceScoringProvider: ArgumentsProvider {
 	val rawData = arrayOf(
 		// jUdge BEISPIEL_B
 		arrayOf<IntArray>(
-				intArrayOf(101, 1,1 , 1, 1, 1, 4, 4),
+				intArrayOf(101, 1,1, 1, 1, 1, 4, 4),
 				intArrayOf(102, 2,2, 3, 2, 2, 1, 1),
 				intArrayOf(103, 3,3, 2, 5, 5, 2, 2),
 				intArrayOf(104, 4,4, 4, 3, 4, 5, 3),

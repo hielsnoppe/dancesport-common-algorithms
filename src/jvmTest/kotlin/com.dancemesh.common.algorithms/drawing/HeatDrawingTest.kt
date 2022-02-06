@@ -73,7 +73,7 @@ class HeatDrawingTest {
 		)
 	}
 	
-	fun <P2> getDoubles (fst: HeatDraw<P2>, snd: HeatDraw<P2>): Set<P2> {
+	fun <P2> getDoubles (fst: com.dancemesh.common.algorithms.domain.HeatDraw<P2>, snd: com.dancemesh.common.algorithms.domain.HeatDraw<P2>): Set<P2> {
 		
 		val lastHeatOfPreviousDance = fst.getLastHeat()
 		val firstHeatOfCurrentDance = snd.getFirstHeat()

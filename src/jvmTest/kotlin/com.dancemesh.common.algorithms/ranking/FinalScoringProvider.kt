@@ -8,13 +8,13 @@ import org.junit.jupiter.params.provider.Arguments
 object FinalScoringProvider: ArgumentsProvider {
  
     override fun provideArguments (context: ExtensionContext): Stream<Arguments> =
-    		rawData.map({ argumentsOf(it) }).stream()
+    		rawData.map { argumentsOf(it) }.stream()
 	
 	fun argumentsOf(data: Array<IntArray>): Arguments {
 			
     	val ranking = FinalDanceScoringProvider.getRanking(data)
-		var scorings = generateDanceScorings(data).map({ FinalDanceScoringProvider.getScoring(it) })
-		
+		var scorings = generateDanceScorings(data).map { FinalDanceScoringProvider.getScoring(it) }
+
 		return Arguments.of(scorings, ranking)
 	}
 	
