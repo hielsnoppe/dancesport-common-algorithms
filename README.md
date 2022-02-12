@@ -1,6 +1,35 @@
 # Common algorithms for DanceSport
 
-## Ranking
+[![CodeFactor](https://www.codefactor.io/repository/github/hielsnoppe/dancesport-common-algorithms/badge)](https://www.codefactor.io/repository/github/hielsnoppe/dancesport-common-algorithms)
+
+This library supports developers of open-source software for DanceSport
+with carefully crafted and extensively reviewed and tested implementations
+of the common algorithms that underlie the rules governing DanceSport competitions.
+
+**Note:** This library is neither reviewed nor certified (yet) by any sports governing body such as,
+e.g., the [World DanceSport Federation (WDSF)](https://www.worlddancesport.org/)
+or the [World Dance Council (WDC)](https://www.wdcdance.com/).
+
+## Scoring and Ranking
+
+Abstract base algorithms
+
+* **SimpleRanking**:
+* **CompositeRanking**:
+
+Concrete algorithms:
+
+* **MarksCountRanking**:
+* **MajorityRanking**:
+* **MultiMajorityRanking**:
+
+### WDSF Absolute Judging System
+
+The following versions of the WDSF Absolute Judging System are implemented:
+
+* Version 1.0 (deprecated): implemented
+* Version 2.1 (deprecated): work in progress
+* Version 3.0: work in progress
 
 ## Drawing
 
