@@ -6,55 +6,80 @@ import kotlin.test.assertTrue
 
 class AJS_1_0_MarkTest() {
 
-	companion object {
+    companion object {
 
-		/**
-		 * @see [WDSF website](https://cdnb.worlddancesport.org/legacy-results/40850/W.pdf)
-		 */
-		val waltz_1 = mapOf(
-			'A' to AJS_1_0_Mark.of(8.5, 8.5, 9.0, 8.5, 8.5),
-			'B' to AJS_1_0_Mark.of(8.0, 8.0, 8.5, 8.5, 7.5),
-			'C' to AJS_1_0_Mark.of(9.0, 9.5, 9.0, 9.5, 8.5),
-			'D' to AJS_1_0_Mark.of(8.5, 8.5, 8.5, 8.5, 8.0),
-			'E' to AJS_1_0_Mark.of(9.0, 8.5, 8.5, 9.0, 8.5),
-			'F' to AJS_1_0_Mark.of(8.5, 9.0, 8.5, 8.0, 8.5),
-			'G' to AJS_1_0_Mark.of(8.5, 8.5, 9.0, 9.0, 8.5),
-			'H' to AJS_1_0_Mark.of(9.0, 9.0, 9.0, 8.5, 8.5),
-			'I' to AJS_1_0_Mark.of(9.5, 9.0, 9.0, 8.5, 9.0),
-			'J' to AJS_1_0_Mark.of(9.0, 9.5, 9.0, 9.5, 9.5),
-			'K' to AJS_1_0_Mark.of(9.0, 9.5, 9.5, 9.5, 9.0),
-		)
-	}
+        /**
+         * @see [WDSF website](https://cdnb.worlddancesport.org/legacy-results/40850/W.pdf)
+         */
+        val waltz_1 = mapOf(
+            'A' to AJS_1_0_Mark.of(8.5, 8.5, 9.0, 8.5, 8.5),
+            'B' to AJS_1_0_Mark.of(8.0, 8.0, 8.5, 8.5, 7.5),
+            'C' to AJS_1_0_Mark.of(9.0, 9.5, 9.0, 9.5, 8.5),
+            'D' to AJS_1_0_Mark.of(8.5, 8.5, 8.5, 8.5, 8.0),
+            'E' to AJS_1_0_Mark.of(9.0, 8.5, 8.5, 9.0, 8.5),
+            'F' to AJS_1_0_Mark.of(8.5, 9.0, 8.5, 8.0, 8.5),
+            'G' to AJS_1_0_Mark.of(8.5, 8.5, 9.0, 9.0, 8.5),
+            'H' to AJS_1_0_Mark.of(9.0, 9.0, 9.0, 8.5, 8.5),
+            'I' to AJS_1_0_Mark.of(9.5, 9.0, 9.0, 8.5, 9.0),
+            'J' to AJS_1_0_Mark.of(9.0, 9.5, 9.0, 9.5, 9.5),
+            'K' to AJS_1_0_Mark.of(9.0, 9.5, 9.5, 9.5, 9.0),
+        )
+        val waltz_7 = mapOf(
+            'A' to AJS_1_0_Mark.of(9.0, 9.5, 9.5, 9.5, 9.5),
+            'B' to AJS_1_0_Mark.of(9.5, 9.5, 9.5, 9.5, 9.0),
+            'C' to AJS_1_0_Mark.of(8.5, 9.0, 9.0, 8.5, 8.5),
+            'D' to AJS_1_0_Mark.of(9.0, 9.0, 8.5, 9.0, 9.0),
+            'E' to AJS_1_0_Mark.of(8.5, 8.5, 9.0, 9.0, 9.0),
+            'F' to AJS_1_0_Mark.of(8.5, 9.0, 8.5, 8.5, 9.0),
+            'G' to AJS_1_0_Mark.of(9.5, 9.5, 9.5, 9.0, 9.5),
+            'H' to AJS_1_0_Mark.of(9.5, 9.0, 9.5, 9.5, 9.0),
+            'I' to AJS_1_0_Mark.of(9.5, 9.5, 10.0, 9.5, 9.0),
+            'J' to AJS_1_0_Mark.of(9.5, 9.5, 10.0, 10.0, 9.5),
+            'K' to AJS_1_0_Mark.of(9.5, 9.5, 9.5, 9.5, 9.5),
+        )
+    }
 
-	@Test
-	fun testCompareTo () {
-		assertCompareTo(waltz_1['A']!!, waltz_1['B']!!)
-		assertCompareTo(waltz_1['C']!!, waltz_1['B']!!)
-		assertCompareTo(waltz_1['D']!!, waltz_1['B']!!)
-		assertCompareTo(waltz_1['C']!!, waltz_1['A']!!)
-		assertCompareTo(waltz_1['A']!!, waltz_1['D']!!)
-	}
+    @Test
+    fun testCompareTo() {
+        assertCompareTo(waltz_1['A']!!, waltz_1['B']!!)
+        assertCompareTo(waltz_1['C']!!, waltz_1['B']!!)
+        assertCompareTo(waltz_1['D']!!, waltz_1['B']!!)
+        assertCompareTo(waltz_1['C']!!, waltz_1['A']!!)
+        assertCompareTo(waltz_1['A']!!, waltz_1['D']!!)
+    }
 
-	private fun assertCompareTo (better: AJS_1_0_Mark, worse: AJS_1_0_Mark) {
-		assertTrue(better > worse, "")
-	}
+    private fun assertCompareTo(better: AJS_1_0_Mark, worse: AJS_1_0_Mark) {
+        assertTrue(better > worse, "")
+    }
 
-	@Test
-	fun testTotal () {
-		assertTotal(waltz_1['A']!!, 43.0)
-		assertTotal(waltz_1['B']!!, 40.5)
-		assertTotal(waltz_1['C']!!, 45.5)
-		assertTotal(waltz_1['D']!!, 42.0)
-		assertTotal(waltz_1['E']!!, 43.5)
-		assertTotal(waltz_1['F']!!, 42.5)
-		assertTotal(waltz_1['G']!!, 43.5)
-		assertTotal(waltz_1['H']!!, 44.0)
-		assertTotal(waltz_1['I']!!, 45.0)
-		assertTotal(waltz_1['J']!!, 46.5)
-		assertTotal(waltz_1['K']!!, 46.5)
-	}
+    @Test
+    fun testTotal() {
+        assertTotal(waltz_1['A']!!, 43.0)
+        assertTotal(waltz_1['B']!!, 40.5)
+        assertTotal(waltz_1['C']!!, 45.5)
+        assertTotal(waltz_1['D']!!, 42.0)
+        assertTotal(waltz_1['E']!!, 43.5)
+        assertTotal(waltz_1['F']!!, 42.5)
+        assertTotal(waltz_1['G']!!, 43.5)
+        assertTotal(waltz_1['H']!!, 44.0)
+        assertTotal(waltz_1['I']!!, 45.0)
+        assertTotal(waltz_1['J']!!, 46.5)
+        assertTotal(waltz_1['K']!!, 46.5)
 
-	private fun assertTotal (mark: AJS_1_0_Mark, expectedTotal: Double) {
-		assertEquals(expectedTotal, mark.total)
-	}
+        assertTotal(waltz_7['A']!!, 47.0)
+        assertTotal(waltz_7['B']!!, 47.0)
+        assertTotal(waltz_7['C']!!, 43.5)
+        assertTotal(waltz_7['D']!!, 44.5)
+        assertTotal(waltz_7['E']!!, 44.0)
+        assertTotal(waltz_7['F']!!, 43.5)
+        assertTotal(waltz_7['G']!!, 47.0)
+        assertTotal(waltz_7['H']!!, 46.5)
+        assertTotal(waltz_7['I']!!, 47.5)
+        assertTotal(waltz_7['J']!!, 48.5)
+        assertTotal(waltz_7['K']!!, 47.5)
+    }
+
+    private fun assertTotal(mark: AJS_1_0_Mark, expectedTotal: Double) {
+        assertEquals(expectedTotal, mark.total)
+    }
 }

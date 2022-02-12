@@ -5,43 +5,43 @@ import com.dancemesh.common.algorithms.util.IntegerInterval
 /**
  * A ranking relates a set of candidates to ranks represented by integer intervals.
  */
-interface Ranking<C>: Scoring<C, IntegerInterval> {
+interface Ranking<C> : Scoring<C, IntegerInterval> {
 	
-	fun getRank (candidate: C): IntegerInterval
-//	fun getCandidates (): Set<C>
-	override fun equals(other: Any?): Boolean
+    fun getRank(candidate: C): IntegerInterval
+// 	fun getCandidates (): Set<C>
+    override fun equals(other: Any?): Boolean
 	
-	/**
-	 * @todo Specify validation rules
-	 *
+    /**
+     * @todo Specify validation rules
+     *
      * The sum of all ranks must equal the sum of the integer sequence from 1 to
      * number of ranked entities.
      *
 
-    public static function isValid ($array) {
+     public static function isValid ($array) {
 
-        // Create ranges by counting occurences of each rank.
-        // Built in array_count_values does not count floats.
-        $counts = Util::array_count_values($array, 'floatval');
+     // Create ranges by counting occurences of each rank.
+     // Built in array_count_values does not count floats.
+     $counts = Util::array_count_values($array, 'floatval');
 
-        // Sort by keys (ranks).
-        ksort($counts);
+     // Sort by keys (ranks).
+     ksort($counts);
 
-        $n = 0;
+     $n = 0;
 
-        foreach ($counts as $rank => $count) {
+     foreach ($counts as $rank => $count) {
 
-            // Product of size of range and rank must match
-            // sum of all ranks covered by this range.
+     // Product of size of range and rank must match
+     // sum of all ranks covered by this range.
 
-            if ($count * $rank != array_sum(range($n + 1, $n + $count))) {
+     if ($count * $rank != array_sum(range($n + 1, $n + $count))) {
 
-                return false;
-            }
+     return false;
+     }
 
-            $n = $n + $count;
-        }
+     $n = $n + $count;
+     }
 
-        return true;
-    }*/
+     return true;
+     }*/
 }

@@ -1,6 +1,6 @@
 package com.dancemesh.common.algorithms.domain
 
-abstract class CompositeScore<T> {//: Comparable<CompositeScore<T>> {
+abstract class CompositeScore<T> { // : Comparable<CompositeScore<T>> {
 
     val map: MutableMap<T, MutableList<Double>> = mutableMapOf()
 
@@ -13,7 +13,7 @@ abstract class CompositeScore<T> {//: Comparable<CompositeScore<T>> {
         }
     }
 
-    fun addScore (component: T, score: Double) {
+    fun addScore(component: T, score: Double) {
 
         if (!map.containsKey(component))
             map[component] = mutableListOf()
@@ -21,13 +21,13 @@ abstract class CompositeScore<T> {//: Comparable<CompositeScore<T>> {
         map[component]!!.add(score)
     }
 
-    fun getScore (component: T): Double =
+    fun getScore(component: T): Double =
         aggregate(getScores(component))
 
-    fun getScores (component: T): List<Double> =
+    fun getScores(component: T): List<Double> =
         map[component] ?: listOf()
 
     fun getComponents(): Set<T> = map.keys
 
-    abstract fun aggregate (marks: List<Double>): Double
+    abstract fun aggregate(marks: List<Double>): Double
 }

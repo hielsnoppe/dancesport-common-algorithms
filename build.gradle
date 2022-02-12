@@ -1,7 +1,7 @@
 plugins {
     id 'org.jetbrains.kotlin.multiplatform' version '1.6.10'
     id 'org.jetbrains.dokka' version '1.6.10'
-    id 'io.kotest.multiplatform' version '5.1.0'
+    id 'maven-publish'
 }
 
 group = 'com.dancemesh.common'
@@ -44,9 +44,6 @@ kotlin {
         commonTest {
             dependencies {
                 implementation kotlin('test')
-                implementation group: 'io.kotest', name: 'kotest-framework-engine', version: '5.1.0'
-                implementation group: 'io.kotest', name: 'kotest-assertions-core', version: '5.1.0'
-                //implementation group: 'io.kotest', name: 'kotest-framework-datatest', version: '5.1.0'
             }
         }
         jvmMain {

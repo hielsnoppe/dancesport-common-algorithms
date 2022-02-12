@@ -7,5 +7,5 @@ import com.dancemesh.common.algorithms.domain.HeatDraw
  */
 interface HeatDrawingAlgorithm<P> {
 	
-	fun draw (participants: Set<P>, numberOfHeats: Int): com.dancemesh.common.algorithms.domain.HeatDraw<P>
+    fun draw(participants: Set<P>, numberOfHeats: Int): HeatDraw<P>
 }
