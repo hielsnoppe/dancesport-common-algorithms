@@ -23,7 +23,7 @@ class MultiRandomizedNice<P>() : MultiHeatDrawingAlgorithm<P> {
             val affected = acc.last().getLastHeat()
             val uninvolved = participants - affected
             val firstHeat = uninvolved.shuffled().take(participantsPerHeat)
-            val otherHeat = ((uninvolved - firstHeat) + affected).shuffled()
+            val otherHeat = (uninvolved - firstHeat + affected).shuffled()
 			
             val draw: MutableHeatDraw<P> = HeatDrawImpl<P>()
 			

@@ -6,20 +6,20 @@ import org.junit.jupiter.params.provider.CsvSource
 
 class MajorityRankingAlgorithmUtilsTest() {
 	
-	@ParameterizedTest
+    @ParameterizedTest
     @CsvSource(
-		"3, 2",
-		"5, 3",
-		"7, 4",
-		"9, 5",
-		"11, 6",
-		"13, 7",
-		"15, 8"
+        "3, 2",
+        "5, 3",
+        "7, 4",
+        "9, 5",
+        "11, 6",
+        "13, 7",
+        "15, 8"
     )
-	fun testGetMajority(total: Int, expectedResult: Int) {
+    fun testGetMajority(total: Int, expectedResult: Int) {
 		
-		assertEquals(expectedResult, MajorityRankingAlgorithmUtils.getMajority(total))
-	}
+        assertEquals(expectedResult, MajorityRankingAlgorithmUtils.getMajority(total))
+    }
 	
 	/*
 	@Test

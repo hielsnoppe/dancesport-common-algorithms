@@ -3,7 +3,6 @@ package com.dancemesh.common.algorithms.wdsf
 import com.dancemesh.common.algorithms.domain.CompositeMark
 import com.dancemesh.common.algorithms.domain.CompositeScore
 import com.dancemesh.common.algorithms.ranking.CompositeRankingAlgorithm
-import com.dancemesh.common.algorithms.ranking.SimpleRankingAlgorithm
 
 enum class AJS_1_0_Components {
     PB, // Posture, Balance, Coordination
@@ -37,4 +36,4 @@ class AJS_1_0_Score(marks: Collection<CompositeMark<AJS_1_0_Components>>) :
         marks.sorted().drop(1).dropLast(1).average()
 }
 
-object AJS_1_0_RankingAlgorithm : CompositeRankingAlgorithm<AJS_1_0_Components, AJS_1_0_Score>() {}
+object AJS_1_0_RankingAlgorithm : CompositeRankingAlgorithm<AJS_1_0_Components, AJS_1_0_Score>()

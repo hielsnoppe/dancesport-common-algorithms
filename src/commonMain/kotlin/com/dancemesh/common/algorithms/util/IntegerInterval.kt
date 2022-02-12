@@ -14,7 +14,7 @@ data class IntegerInterval(val min: Int, val max: Int) : Comparable<IntegerInter
         this.min > other.max || this.max < other.min
     fun size(): Int = max - min
     fun median(): Int = (min + max) / 2
-    fun average(): IntFraction = IntFraction((min + max), 2)
+    fun average(): IntFraction = IntFraction(min + max, 2)
 	
     override fun compareTo(other: IntegerInterval): Int {
 		

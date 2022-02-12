@@ -43,7 +43,7 @@ object MultiMajorityRankingAlgorithm : MultiRankingAlgorithm<List<IntegerInterva
 				
                 val foo = first.entries.zip(second.entries) { a, b -> a.compareTo(b) }.get(start - 1)
                 if (foo != 0) return foo
-				
+
                 return first.horrorTable.zip(second.horrorTable) { a, b -> a.compareTo(b) }
                     .drop(start - 1).firstOrNull { x -> x != 0 } ?: 0
             }

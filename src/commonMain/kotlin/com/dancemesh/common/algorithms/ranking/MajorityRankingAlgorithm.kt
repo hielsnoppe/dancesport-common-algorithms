@@ -33,7 +33,7 @@ object MajorityRankingAlgorithm : RankingAlgorithm<List<IntegerInterval>> {
      * Use this to calculate results from a dance
      */
     override fun <C> getRanking(scoring: Scoring<C, List<IntegerInterval>>): Ranking<C> {
-		
+
         val table: Set<Row> = getMajorityTable(scoring)
         val ranking: MutableRanking<C> = RankingImpl<C>()
 		
