@@ -27,9 +27,9 @@ Concrete algorithms:
 
 The following versions of the WDSF Absolute Judging System are implemented:
 
-* Version 1.0 (deprecated): implemented
-* Version 2.1 (deprecated): work in progress
-* Version 3.0: work in progress
+* Version 1.0: deprecated by WDSF, implemented for historical reasons
+* Version 2.1: deprecated by WDSF, work in progress
+* Version 3.0: implemented
 
 ## Drawing
 
