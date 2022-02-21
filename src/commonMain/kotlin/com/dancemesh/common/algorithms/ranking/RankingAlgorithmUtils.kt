@@ -46,4 +46,7 @@ object RankingAlgorithmUtils {
 
         return acc
     }
+
+    fun <C> sliceRanking(ranking: Ranking<C>, predicate: (C) -> Boolean): Ranking<C> =
+        getRanking(ranking.getScores().filter { predicate(it.first) }.toSet())
 }
